@@ -95,9 +95,7 @@ a:visited { color: white;}
     max-height: [%LogoMaxHeight%]; 
     background:url('[%DesktopBackground%]'); 
   */
-
 }
-
 
 #container #flex-frame .content-container .content-well {
   display: flex;
@@ -155,68 +153,89 @@ a:visited { color: white;}
 
 }
 
-
 #container #flex-frame .content-container .content-well .content-middle-well .disclaimer {display:none;}
 
+/* media query for mobile by mistake  */
 
-@media (max-width: 768px) {
-	#container {display: none;}
+@media (max-width: 700px) {
+	#container #flex-frame .media-container { 
+		width: 50%;
+		transition: ease 0.3s;
+	}
+	#container #flex-frame .content-container {
+		width: 50%;
+		transition: ease 0.3s;
+	}
 }
 
-@media all and (min-width: 768px) and (max-width: 899px) {
+/* media query for tablet portrait mode  */
+
+
+@media all and (min-width: 701px) and (max-width: 899px) {
 	#container #flex-frame .media-container { 
 		width: calc(100% - 323px);
-		transition: ease 0.5s;
+		transition: ease 0.3s;
 	}
 	#container #flex-frame .content-container {
 		width: 323px;
-		transition: ease 0.5s;
+		transition: ease 0.3s;
 	}
 }
 
-@media all and (min-width: 900px) and (max-width: 1019px) {
+/* media query for tablet landscape mode */
+
+
+@media all and (min-width: 900px) and (max-width: 1024px) {
 	#container #flex-frame .media-container { 
 		width: calc(100% - 455px);
-		transition: ease 0.5s;
+		transition: ease 0.3s;
 	}
 	#container #flex-frame .content-container {
 		width: 455px;
-		transition: ease 0.5s;
+		transition: ease 0.3s;
 	}
 }
 
-@media all and (min-width: 1020px) and (max-width: 1279px) {
+/* media query for small desktop / laptop mode */
+
+@media all and (min-width: 1025px) and (max-width: 1279px) {
 	#container #flex-frame .media-container { 
 		width: calc(100% - 455px);
-		transition: ease 0.5s;
+		transition: ease 0.3s;
 	}
 	#container #flex-frame .content-container {
 		width: 455px;
-		transition: ease 0.5s;
+		transition: ease 0.3s;
 	}
 }
+
+/* media query for medium desktop / laptop mode */
+
 
 @media all and (min-width: 1280px) and (max-width: 1604px) {
 	#container #flex-frame .media-container { 
 		min-width: 825px;
 		width: 60%;
-		transition: ease 0.5s;
+		transition: ease 0.3s;
 	}
 	#container #flex-frame .content-container {
 		width: 40%;
 		min-width: 455px;
-		transition: ease 0.5s;
+		transition: ease 0.3s;
 	}
 }
+
+/* media query for large desktop / laptop mode */
+
 
 @media (min-width: 1605) {
 	#container #flex-frame .media-container { 
 		width: calc(100% - 645px);
-		transition: ease 0.5s;
+		transition: ease 0.3s;
 	}
 	#container #flex-frame .content-container {
 		width: 645px;
-		transition: ease 0.5s;
+		transition: ease 0.3s;
 	}
 }
 
