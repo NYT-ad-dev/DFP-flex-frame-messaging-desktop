@@ -15,6 +15,7 @@
 	developer: Tanvir Haider
 	team: Ad Platforms
 	last modified: 02.10.2020 
+	git repo: https://github.com/NYT-ad-dev/DFP-flex-frame-messaging-desktop
 -->
 
 <body>
@@ -23,12 +24,12 @@
 			<div id="flex-frame">
 					<div class="media-container"></div>
 					<div class="content-container">
-						<div id="logo" onclick="eventTracker.generalEventTrack('clickURL', 'logo', '%%CLICK_URL_UNESC%%%%DEST_URL_UNESC%%')" class="logo"></div>
+						<div class="logo" id="logo" onclick="eventTracker.generalEventTrack('clickURL', 'logo', '%%CLICK_URL_UNESC%%%%DEST_URL_UNESC%%')"></div>
 						<div class="content-well">
 							<div class="content-middle-well">
 								<div class="title">[%Headline%]</div>
 								<div class="summary">[%Summary%]</div>
-								<div onclick="eventTracker.generalEventTrack('clickURL', 'cta', '%%CLICK_URL_UNESC%%%%DEST_URL_UNESC%%')" class="cta">[%CTA%]</div>
+								<div class="cta" onclick="eventTracker.generalEventTrack('clickURL', 'cta', '%%CLICK_URL_UNESC%%%%DEST_URL_UNESC%%')">[%CTA%]</div>
 								<div class="disclaimer">[%Disclaimer%]</div>
 							</div>
 						</div>
@@ -73,25 +74,13 @@
 		};
 		}();
 
-		(function() {
-			// Hide gradient if necessary
-			var toggleGradient = [%ToggleGradient%];
-			var gradients = [].slice.call(document.getElementsByClassName('gradient'));
-			if (toggleGradient > 0) {gradients.forEach(function(el) {el.style.display = 'none';});}
-		})();
-
-		parent.postMessage({exclusive: [%Exclusivity%], type: '[%ExclusivityType%]', div:'%%PATTERN:div%%'},'*');
+		var exclusiveStatus;
+		
+		try { parent.postMessage({exclusive: [%Exclusivity%], type: '[%ExclusivityType%]', div:'%%PATTERN:div%%'},'*'); } catch (Error) {console.log(Error);}
+		
 
 	</script>
 
 	
 </body>
 </html>
-
-
-
-
-
-
-
-
