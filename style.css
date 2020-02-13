@@ -162,14 +162,10 @@ a:visited { color: white;}
 /* media query for mobile by mistake  */
 
 @media (max-width: 727px) {
-	#container #flex-frame .media-container { 
-		width: 50%;
-		transition: ease 0.3s;
+	body { 
+		display: none;
 	}
-	#container #flex-frame .content-container {
-		width: 50%;
-		transition: ease 0.3s;
-	}
+	
 }
 
 /* media query for tablet portrait mode  */
