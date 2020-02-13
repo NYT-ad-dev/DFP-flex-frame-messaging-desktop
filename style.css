@@ -48,21 +48,23 @@ a:visited { color: white;}
 	box-sizing: border-box;
 	display: flex;
 
-	/* background-color: [%BackgroundColor%];
-	color:[%FontColor%]; */
+	background-color: [%BackgroundColor%];
+	color:[%FontColor%];
 }
 
 
 #container #flex-frame .media-container {
-	background-image: url(./images/imgad-1.jpg);
+	/* background-image: url(./images/imgad-1.jpg); */
 	background-size: cover;
 	background-position: center;
 	width: calc(100% - 645px);
 	height: 100%;
 	position: relative;
 	overflow: hidden;
-
-   /* background:url('[%DesktopBackground%]'); */
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-image: url('[%DesktopBackground%]');
+    /* background:url('[%DesktopBackground%]'); */
 }
 
 
@@ -75,7 +77,7 @@ a:visited { color: white;}
 	background-position: center;
 	display: flex;
 
-  /* background: url('[%OptionalImageSecondContainer%]'); */
+   background: url('[%OptionalImageSecondContainer%]');
 }
 
 #container #flex-frame .content-container .logo {
@@ -85,16 +87,18 @@ a:visited { color: white;}
 	margin-left: 25px;
 	min-width: 150px;
 	min-height: 35px;
-	background-image: url(./images/image.png);
+	/* background-image: url(./images/image.png); */
 	background-size: contain;
 	background-position: 0%;
 	background-repeat: no-repeat;
-
-  /* 
+	background:url('[%Logo%]'); 
+  
     max-width: [%LogoMaxWidth%];
     max-height: [%LogoMaxHeight%]; 
-    background:url('[%DesktopBackground%]'); 
-  */
+	
+	/* background-image: url(./images/image.png); */
+
+  
 }
 
 #container #flex-frame .content-container .content-well {
@@ -108,7 +112,6 @@ a:visited { color: white;}
   align-self: flex-end;
   margin-left: 25px;
   width: 100%;
-  /* margin-right: 30px; */
 }
 
 #container #flex-frame .content-container .content-well .content-middle-well .title {
@@ -116,14 +119,12 @@ a:visited { color: white;}
 	font-weight: 600;
 	font-size: 27px;
 	max-width: 90%;
-	/* width:575; */
 	margin-bottom: 1px;
 	line-height: 28px;
 }
 
 #container #flex-frame .content-container .content-well .content-middle-well .summary {
 	font-size: 18px;
-	/* max-width: 355px; */
 	max-width: 90%;
 	margin-bottom: 0px;
 	line-height: 23px;
@@ -149,11 +150,11 @@ a:visited { color: white;}
 	border: 1px solid white;
 	background-color: black;
 
-/*   
+  
 	background-color: [%CTABackgroundColor%];
 	border: 1px solid [%FontColor%];
 	color: [%FontColor%]; 
-*/
+
 
 }
 
@@ -210,4 +211,4 @@ a:visited { color: white;}
 
 
 
-/* [%CustomCSS%] */
+ [%CustomCSS%] 
