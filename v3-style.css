@@ -1,0 +1,208 @@
+
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700&display=swap');
+
+@font-face {
+ font-family: "[%FontFamilyName%]";
+ src: url([%FontURL%]) format("[%FontFormat%]");
+}
+
+@font-face {
+ font-family: "[%SecondFontFamilyName%]";
+ src: url([%SecondFontURL%]) format("[%SecondFontFormat%]");
+}
+
+p { margin: 0px;}
+
+body {
+	height: 270px;
+	width: 100%;
+	padding: 0px;
+	margin: 0px;
+}
+
+.impression-tracker { display: none;}
+
+a:link {
+	text-decoration: none;
+	color: white;
+	min-height: 1px;
+}
+
+a:visited { color: white;}
+
+#container {
+	max-width: 1605px;
+	margin: 0 auto;
+	font-family: 'Source Sans Pro', sans-serif;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+}
+
+#container #flex-frame {
+	position: relative;
+	width: 100%;
+	height: 270px;
+	background-size: cover;
+	background-position: right;
+	border: 1px solid #cccccc;
+	box-sizing: border-box;
+	display: flex;
+
+	background-color: [%BackgroundColor%];
+	color:[%FontColor%];
+}
+
+
+#container #flex-frame .media-container {
+	/* background-image: url(./images/imgad-1.jpg); */
+	background-size: cover;
+	background-position: center;
+	width: calc(100% - 645px);
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-image: url('[%DesktopBackground%]');
+    /* background:url('[%DesktopBackground%]'); */
+}
+
+
+#container #flex-frame .content-container {
+	width: 645px;
+	height: 100%;
+	position: relative;
+	background: black;
+	background-size: cover;
+	background-position: center;
+	display: flex;
+
+   background: url('[%OptionalImageSecondContainer%]');
+}
+
+#container #flex-frame .content-container .logo {
+	margin-bottom: 20px;
+	position: absolute;
+	margin-top:25px;
+	margin-left: 25px;
+	min-width: 150px;
+	min-height: 35px;
+	background-size: contain;
+	background-position: 0%;
+	background-repeat: no-repeat;
+	background-image: url('[%Logo%]');
+    max-width: [%LogoMaxWidth%];
+    max-height: [%LogoMaxHeight%]; 
+}
+
+#container #flex-frame .content-container .content-well {
+  display: flex;
+  width: 100%;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+#container #flex-frame .content-container .content-well .content-middle-well {
+  align-self: flex-end;
+  margin-left: 25px;
+  width: 100%;
+}
+
+#container #flex-frame .content-container .content-well .content-middle-well .title {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 600;
+	font-size: 27px;
+	max-width: 90%;
+	margin-bottom: 1px;
+	line-height: 28px;
+}
+
+#container #flex-frame .content-container .content-well .content-middle-well .summary {
+	font-size: 18px;
+	max-width: 90%;
+	margin-bottom: 0px;
+	line-height: 23px;
+	letter-spacing: -0.01em;
+}
+
+#container #flex-frame .content-container .content-well .content-middle-well .cta {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 700;
+	background-color: transparent;
+	color: white;
+	pointer-events: all;
+	flex: none;
+	cursor: pointer;
+	font-size: 14px;
+	padding: 10px 15px;
+	text-transform: uppercase;
+	text-align: center;
+	display: inline-block;
+	margin-bottom: 25px;
+	margin-top: 12px;
+
+	border: 1px solid white;
+	background-color: black;
+
+  
+	background-color: [%CTABackgroundColor%];
+	border: 1px solid [%FontColor%];
+	color: [%FontColor%]; 
+
+
+}
+
+#container #flex-frame .content-container .content-well .content-middle-well .disclaimer {display:none;}
+
+/* media query for mobile by mistake  */
+
+@media (max-width: 727px) {
+	body { 
+		display: none;
+	}
+	
+}
+
+/* media query for tablet portrait mode  */
+
+@media all and (min-width: 728px) and (max-width: 970px) {
+	#container #flex-frame .media-container { 
+		width: calc(100% - 323px);
+		transition: ease 0.3s;
+	}
+	#container #flex-frame .content-container {
+		width: 323px;
+		transition: ease 0.3s;
+	}
+}
+
+/* media query for tablet landscape mode */
+
+
+@media all and (min-width: 971px) and (max-width: 1280px) {
+	#container #flex-frame .media-container { 
+		width: calc(100% - 455px);
+		transition: ease 0.3s;
+	}
+	#container #flex-frame .content-container {
+		width: 455px;
+		transition: ease 0.3s;
+	}
+}
+
+/* media query for small desktop / laptop mode */
+
+@media all and (min-width: 1281px) {
+	#container #flex-frame .media-container { 
+		width: 60%;
+		transition: ease 0.3s;
+	}
+	#container #flex-frame .content-container {
+		width: 40%;
+		transition: ease 0.3s;
+	}
+}
+
+
+
+ [%CustomCSS%] 
